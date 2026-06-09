@@ -32,7 +32,7 @@ This project demonstrates:
 - Python
 
 ### 🔹 APIs Used
-- Pollinations (Text Generation)
+- Gemini (Text Generation)
 - Hugging Face (Stable Diffusion Image Generation)
 
 ### 🔹 Libraries
