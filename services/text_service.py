@@ -29,7 +29,7 @@ from tenacity import retry, stop_after_attempt, wait_exponential
 from loguru import logger
 import urllib.parse
 
-BASE_URL = "https://text.pollinations.ai/prompt/"
+# BASE_URL = "https://text.pollinations.ai/prompt/"
 
 @retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=1, min=2, max=10))
 def generate_text(prompt: str) -> str:
