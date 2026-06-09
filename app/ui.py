@@ -82,15 +82,18 @@ with tab2:
                 st.warning("Please enter a prompt.")
             else:
                 with st.spinner("Generating image..."):
-                    image_bytes = generate_image(img_prompt)
+                    generated_image = generate_image(img_prompt)
 
-                if image_bytes:
-                    image = Image.open(io.BytesIO(image_bytes))
-                    st.image(image, caption="Generated Image", use_column_width=True)
+                if generated_image:
+                    st.image(
+                        generated_image,
+                        caption="Generated Image",
+                        use_column_width=True,
+                    )
 
                     # Download button
                     buf = io.BytesIO()
-                    image.save(buf, format="PNG")
+                    generated_image.save(buf, format="PNG")
 
                     st.download_button(
                         label="Download Image",
@@ -100,10 +103,3 @@ with tab2:
                     )
                 else:
                     st.error("Image generation is slow or busy. Please try again in a few seconds.")
-
-
-
-import time
-
-# inside image button logic
-time.sleep(2)

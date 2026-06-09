@@ -1,6 +1,27 @@
+# Virtual Environment
 venv/
+env/
+
+# Environment Variables
+.env
+
+# Python Cache
 __pycache__/
 *.pyc
-.env
-app.log
+*.pyo
+
+# VS Code
+.vscode/
+
+# Streamlit
+.streamlit/
+
+# Logs
+*.log
+
+# Generated Images
+test_output.png
+
+# OS Files
 .DS_Store
+Thumbs.db
